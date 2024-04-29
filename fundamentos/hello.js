@@ -2,13 +2,15 @@
  * Sintaxe básica da linguagem
  */
 
+// importação de pacotes
+const colors = require('colors')
 
 // sentenças 
-console.log('Hello World')
+console.log('Hello World'.green)
 
 //blocos
 {
-    console.log("hello JS")
+    console.log("hello JS".rainbow.bold)
 }
 
 // omissão de chaves em estruturas de controle

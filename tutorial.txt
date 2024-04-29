@@ -27,3 +27,63 @@ Number (converte p o tipo numerico)
 Number.isInteger -> verifica se é inteiro ou nao
 
 booleans: 
+só admitem 2 valores: true/false
+
+----------------------------------------------------------------------------------------------------------------------------------------
+AULA 2
+Operadores aritméticos
+ATENÇÃO a regra de precedência:
+1º parenteses
+2º multiplicação
+3º divisão
+4º adição
+5º divisão
+
+ComparadoreS:
+OBSERVÇÃO IMPORTANTE:
+não usar os comparadores == != (riscos devido a tigadem dinÂmica)
+
+------------------------------------------
+
+NPM(Node Package Manager)
+Gerenciador de pacotes node (pacotes com funcionalidades que podem ser adicionadas ao node)
+Para gerenciar(versão, atualizações etc) os pacotes node, é necessário configurar o package.json
+
+json(JavaScript Object Notation)
+npm -version
+npm ls (listar pacotes instalados)
+npm i (instalar pacote)
+npm r (remover um pacote)
+
+obs: os pacotes são instalados no projeto
+
+passo 1: criar o arquivo package.json
+npm init
+
+Repositório de pacotes
+https://www.npmjs.com/
+
+---------------------------------------------
+exercício 
+Criar no console JS um app para calcular a porcentagem, usando a regra de 3 conforme modelo:
+
+10% de 200 = 20
+ X      Y    valor
+
+ Variáveis:
+ 3 variáveis -> x, y, valor
+
+ Processamento:
+ valor = (x * y) / 100
+
+ Saída:
+ valor
+
+ -----------------------------------------------
+ Funções: 
+ função é um bloco de código reutilizável
+
+ Função simples:
+ function none() {}
+
+ 
