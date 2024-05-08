@@ -86,4 +86,23 @@ Criar no console JS um app para calcular a porcentagem, usando a regra de 3 conf
  Função simples:
  function none() {}
 
- 
+ Função com retorno: 
+ function nome() {
+    return
+ }
+
+ Funções anonimas:
+const nome = function() {
+
+}
+
+let nome = function() {
+
+}
+
+Funções em JS podem ser simplificadas
+
+--------------------------------------
+obs:
+typeof // verifica a tipagem
+tipos primitivos (str, num, booleans)
