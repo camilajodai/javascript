@@ -18,7 +18,7 @@ function calculateAverage() {
         status = 'APROVADO';
     }
 
-    document.getElementById('result').innerText = `Média: ${average.toFixed(2)} - Status: ${status}`;
+    document.getElementById('result').innerText = `Média: ${average.toFixed(1)} - Status: ${status}`;
 }
 
 function limpar() {
