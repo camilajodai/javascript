@@ -4,20 +4,26 @@
 
 body {
     font-family: "Nunito", sans-serif;
-    font-family: 1em;
+    font-size: 1em;
 }
 
 img {
     max-width: 100%;
 }
 
-/* cabeçalho */
-header h1 {
-    color: darkslategrey;
+.container {
+    margin: 50px 0px;
     text-align: center;
 }
 
-/* MENU */
+/* Cabeçalho*/
+
+header h1 {
+    color: #cc470d;
+    text-align: center;
+}
+
+/* Menu */
 nav {
     width: 100%;
 }
@@ -26,8 +32,9 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: burlywood;
-    overflow: hidden; /*esconde a barra de rolagem */
+    background: #e15a1f;
+    overflow: hidden;
+    /* Esconde a barra de rolagem */
 }
 
 nav ul li {
@@ -36,22 +43,46 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: #ffffff;
     padding: 10px 15px;
     display: block;
 }
 
 nav ul li a:hover {
-    background-color: cadetblue;
+    background-color: #cc470d;
     transition: all 0.4s;
 }
 
-/* FOOTER */
+/* Conteúdo */
+#sw1 {
+    float: left;
+}
+
+#sw2 {
+    float: right;
+}
+
+/* Rodapé >>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 footer {
     width: 100%;
-    background-color: burlywood;
-    color: black;
+    background-color: #e15a1f;
+    color: #ffffff;
     padding: 5px 0px;
     text-align: center;
+}
 
+/* Layout Tela Maior */
+@media (min-width: 576px) {
+
+    header h1 {
+        text-align: left;
+    }
+
+    .container {
+        text-align: left;
+    }
+
+    #sw2 {
+        float: left;
+    }
 }
