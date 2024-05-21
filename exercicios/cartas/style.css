@@ -69,18 +69,21 @@ button {
 
 #supEsq {
     top: 25px;
-    left: 5px;
+    left: 15px;
     text-align: left;
 }
 
 #infDir {
     bottom: 25px;
-    right: 5px;
+    right: -15px;
     text-align: right;
     transform: rotate(180deg); /* girar 180º*/
 }
 
 .face {
     font-size: 6em;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
