@@ -149,7 +149,7 @@ Encapsulamento
 
 No JavaScript usamos _ antes da variável para encapsular
 
---------------------------------------------------------
+Aula 5 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 No JavaScript objetos podem ser criados sem uma classe modelo
 Estrutura de dados usando Objetos
@@ -165,3 +165,29 @@ Tipos do JavaScript
 - function
 - object
 
+Aula 6 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Array (vetor)
+Array multidimensional (matriz)
+- É uma forma especial de trabalhar com variáveis
+- Índice [0][1]...
+- Na linguagem JS array é um objeto
+
+ATENÇÃO!!!!!!!!
+Cuidado ao manipular os dados e alterar o índice do array
+Mais seguroo:
+push() - método usado para adicionar ao final do array
+pop() - excluir o último registro
+delete - excluir um dado sem alterar o índice
+
+Percorrendo um array 
+1) for forEach
+2) map() //percorre o array, faz algo e gera outro array com o resultado
+
+Um array também pode ser criado como se fosse objeto
+let nome = []
+let nome = new Array()
+
+Um array pode ser criado como uma estrutura de dados junto com objetos e podem sem usados filtros para manipulação de dados
+
+ATENÇÃO!!!!
+Sempre criar uma cópia do array original para exibição
