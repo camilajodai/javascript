@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de IMC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .resultado {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+    <form id="form-imc">
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" required><br>
+        
+        <label for="altura">Altura (cm):</label>
+        <input type="number" id="altura" required><br>
+        
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" required><br>
+
+        <label>Gênero:</label><br>
+        <input type="radio" id="genero-masculino" name="genero" value="masculino" required>
+        <label for="genero-masculino">Masculino</label><br>
+        
+        <input type="radio" id="genero-feminino" name="genero" value="feminino">
+        <label for="genero-feminino">Feminino</label><br>
+        
+        <label for="resultado-imc" class="resultado">Seu IMC:</label>
+        <input type="text" id="resultado-imc" class="resultado" disabled>
+        
+        <input type="submit" value="Calcular IMC">
+    </form>
+
+    <script>
+        const form = document.getElementById("form-imc");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const idade = parseInt(document.getElementById("idade").value);
+            const altura = parseFloat(document.getElementById("altura").value) / 100; // Convertendo para metros
+            const peso = parseFloat(document.getElementById("peso").value);
+            const genero = document.querySelector('input[name="genero"]:checked').value;
+
+            const imc = calcularIMC(altura, peso);
+            const mensagemIMC = interpretarIMC(imc, idade, genero);
+
+            document.getElementById("resultado-imc").value = `${imc.toFixed(1)} - ${mensagemIMC}`;
+        });
+
+        function calcularIMC(altura, peso) {
+            return peso / (altura * altura);
+        }
+
+        function interpretarIMC(imc, idade, genero) {
+            let mensagem = "";
+
+            if (idade >= 18) {
+                if (genero === "masculino") {
+                    if (imc < 18.5) {
+                        mensagem = "Abaixo do peso";
+                    } else if (imc >= 18.5 && imc < 24.9) {
+                        mensagem = "Peso normal";
+                    } else if (imc >= 24.9 && imc < 29.9) {
+                        mensagem = "Sobrepeso";
+                    } else {
+                        mensagem = "Obesidade";
+                    }
+                } else { // Feminino
+                    if (imc < 18.5) {
+                        mensagem = "Abaixo do peso";
+                    } else if (imc >= 18.5 && imc < 24.9) {
+                        mensagem = "Peso normal";
+                    } else if (imc >= 24.9 && imc < 29.9) {
+                        mensagem = "Sobrepeso";
+                    } else {
+                        mensagem = "Obesidade";
+                    }
+                }
+            } else {
+                mensagem = "IMC é calculado apenas para adultos (18 anos ou mais).";
+            }
+
+            return mensagem;
+        }
+    </script>
+</body>
+</html>
