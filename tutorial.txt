@@ -202,3 +202,47 @@ setTimeOut(()=>{}, 1000)
 Usado para executar uma função infinitamente a cada tempo determinado
 
 O JS é capaz de adicinoar ou remover uma classe CSS ao documento HTML
+
+-----------------------------------------------------------
+
+Plataforma Node
+Obs: ao clonar um repositório ou trabalhar em um outro PC é necessário reinstalar as bibliotecas
+presentes nas dependências do package.json
+
+npm install (digitar na raiz do projeto)
+
+------------------------------------------------------------
+
+Assincronismo 
+São métodos e funções que permitem ao JavaScript trabalhar multitarefas 
+- Banco de dados
+- Acesso a URLs (serviços de nuvem, web services, APIs etc)
+- Acesso ao disco do equipamento (HD, SSD etc)
+
+Promise ("promessa")
+1) A resposta a requisição pode ou não dar certo 
+2) A resposta pode ter um delay
+SINTAXE:
+    return new Promise((resolve,reject) => { })
+resolve: ok
+reject: erro
+
+// Quando trabalhamos com promise, devemos usar a estrutura abaixo para obter o resultado do retorno da função
+.then(() => {})
+.catch(() => {})
+
+ibs: é possível usar mais de um THEN para trabalhar diferentes tipos de resposta
+
+async - await
+(forma mais moderna e simples de trabalhar Assincronismo)
+
+Para trabalhar com async e await devemos usar funções, sendo que ao usar o 
+async é Obrigatório o uso do await
+neste caso usamos dentro da função o try catch parar tratamento de exceções
+try {
+        
+    } catch (error) {
+        
+    }
+
+
