@@ -245,4 +245,8 @@ try {
         
     }
 
+-----------------------------------------------
 
+GERANDO DOCUMENTO PDF NO JAVASCRIPT
+
+npm i jspdf
